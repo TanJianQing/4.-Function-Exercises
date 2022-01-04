@@ -1,0 +1,32 @@
+def shipping_charge_calculator(orders):
+    """
+    Calculates fare based on number of orders
+    """
+    # Parameters
+    first_order = 10.95
+    other_orders = 2.95
+
+    # Calculate shipping charge
+    shipping_charge = first_order + (orders-1) * other_orders
+
+    # Returns the calculated shipping charge
+    return shipping_charge
+
+def main():
+    """
+    Runs the function and returns a nice 2d.p value
+    """
+    # Loop that checks if input for orders is valid
+    loop=1
+    while loop == 1:
+        try:
+            orders = int(input('Please key the number of items you want to order:'))
+            loop = 0
+        except ValueError:
+            print('Invalid input! Please key in a proper integer!')
+
+    # Prints shipping charge
+    print('Your shipping charge is: ${:.2f}'.format(shipping_charge_calculator(orders)))
+
+if __name__ == '__main__':
+    main()
