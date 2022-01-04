@@ -2,16 +2,11 @@ def ordinal(number):
     """
     Returns the ordinal number based on the integer
     """
-    ordinal_list = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eight', 'ninth',
-                    'tenth', 'eleventh', 'twelfth']
+    ordinal_dict = {1:'first', 2:'second', 3:'third', 4:'fourth', 5:'fifth', 6:'sixth', 7:'seventh', 8:'eight',
+                    9:'ninth', 10:'tenth', 11:'eleventh', 12:'twelfth'}
 
-    # Return the ordinal number for numbers from 1 to 12 inclusive
-    if number in range(1,len(ordinal_list)+1):
-        return ordinal_list[number-1]
-
-    # Returns blank string otherwise
-    else:
-        return ''
+    # Return the ordinal number for numbers from 1 to 12 inclusive, returns blank string otherwise
+    return ordinal_dict.get(number,'')
 
 def main():
     """
