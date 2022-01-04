@@ -1,0 +1,20 @@
+def fare_calculator(distance):
+    """
+    Calculates fare based on distance travelled
+    """
+    # Parameters
+    base = 4.00
+    fare_every_140m = 0.25
+
+    # Calculates number of 140m intervals travelled, rounds it up to next integer
+    number_of_intervals = round(distance*1000/140)
+
+    # Calculates and returns fare
+    fare = base + fare_every_140m * number_of_intervals
+
+    # Returns the calculated fare
+    return fare
+
+# Runs the function and returns a nice 2d.p value
+# Sample of 100km is used for testing
+print('Your fare is: ${:.2f}'.format(fare_calculator(100)))
