@@ -15,6 +15,11 @@ def fare_calculator(distance):
     # Returns the calculated fare
     return fare
 
-# Runs the function and returns a nice 2d.p value
-# Sample of 100km is used for testing
-print('Your fare is: ${:.2f}'.format(fare_calculator(100)))
+def main():
+    """Runs the function and returns a nice 2d.p value
+    Sample of 100km is used for testing"""
+    
+    print('Your fare is: ${:.2f}'.format(fare_calculator(100)))
+    
+if __name__ == '__main__':
+    main()
