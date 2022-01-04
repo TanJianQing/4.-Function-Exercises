@@ -1,0 +1,31 @@
+def median_finder(num1,num2,num3):
+    """
+    Calculates fare based on number of orders
+    """
+
+    # Calculate shipping charge
+    num_list = sorted([num1,num2,num3])
+
+    # Return the median number
+    return num_list[1]
+
+def main():
+    """
+    Prints the median number based on the 3 values the user inputs
+    """
+    # Loop that checks if input for orders is valid
+    loop=1
+    while loop == 1:
+        try:
+            num1 = float(input('Please key the 1st number:'))
+            num2 = float(input('Please key the 2nd number:'))
+            num3 = float(input('Please key the 3rd number:'))
+            loop = 0
+        except ValueError:
+            print('Invalid input! Please key in proper integers!')
+
+    # Prints median
+    print(f'The median number is: {median_finder(num1,num2,num3)}')
+
+if __name__ == '__main__':
+    main()
