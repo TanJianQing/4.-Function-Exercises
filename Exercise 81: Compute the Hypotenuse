@@ -12,20 +12,27 @@ def hypotenuse_length(side_1,side_2):
     # Print hypotenuse length
     print(f'The hypotenuse length is: {hypotenuse}')
 
-loop = 1
-while loop == 1:
-    # Checks if the length inputs are floats, otherwise loop the query
-    try:
-        side_1 = float(input('Please enter the length of the 1st short side: '))
-        side_2 = float(input('Please enter the length of the 2nd short side: '))
-        # Ends loop if both length inputs are valid
-        if type(side_1) is float and type(side_2) is float:
-            loop = 0
-        else:
+def main():
+    """
+    Runs the main function
+    """
+    loop = 1
+    while loop == 1:
+        # Checks if the length inputs are floats, otherwise loop the query
+        try:
+            side_1 = float(input('Please enter the length of the 1st short side: '))
+            side_2 = float(input('Please enter the length of the 2nd short side: '))
+            # Ends loop if both length inputs are valid
+            if type(side_1) is float and type(side_2) is float:
+                loop = 0
+            else:
+                loop = 1
+        except ValueError:
+            print('Please key in a proper value!')
             loop = 1
-    except ValueError:
-        print('Please key in a proper value!')
-        loop = 1
 
-# Runs the function
-hypotenuse_length(side_1,side_2)
+    # Runs the hypotenuse_length function
+    hypotenuse_length(side_1,side_2)
+    
+if __name__ = '__main__':
+    main()
